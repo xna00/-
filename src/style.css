@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::before {
+  box-sizing: border-box;
+}
+*::after {
+  box-sizing: border-box;
+}
+#html {
+  color: red;
+  width: 50vw;
+  word-break: break-all;
+}
+
+#taiji {
+  width: 200px;
+  height: 200px;
+  position: fixed;
+  left: 50%;
+  top: 20px;
+  border: 1px solid red;
+}
+#taiji::before {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+#taiji::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+@media (max-width: 500px) {
+  #html {
+    height: 50vh;
+    width: 100vw;
+    overflow: auto;
+  }
+
+  #wrapper {
+    height: 50vh;
+  }
+
+  #taiji {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
